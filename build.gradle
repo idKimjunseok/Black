@@ -1,16 +1,24 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.4.10"
+    ext.gradle_version = '4.1.3'
+    ext.google_service_version= '4.3.4'
+    ext.kotlin_version = '1.4.21'
+    ext.firebase_crashlytics_version = '2.3.0'
+    ext.koin_version = '2.2.0'
+    ext.kakao_ad_tracker_version = '0.3.9'
+
+
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.0"
+        classpath "com.android.tools.build:gradle:4.0.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.gms:google-services:$google_service_version"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$firebase_crashlytics_version"
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -18,6 +26,39 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url 'https://navercorp.bintray.com/maps' }
+        maven { url 'https://devrepo.kakao.com/nexus/content/groups/public/' }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+subprojects {
+    configurations {
+        ktlint
+    }
+
+    dependencies {
+        ktlint 'com.github.shyiko:ktlint:0.2.0'
+    }
+
+    // 스타일을 검사하는 태스크
+    task ktlint(type: JavaExec) {
+        main = 'com.github.shyiko.ktlint.Main'
+        classpath = configurations.ktlint
+        args 'src/**/*.kt'
+    }
+
+    // 스타일을 검사하고 맞지 않는 부분을 수정해주는 태스크
+    task ktlintFormat(type: JavaExec) {
+        main = 'com.github.shyiko.ktlint.Main'
+        classpath = configurations.ktlint
+        args '-F', 'src/**/*.kt'
+    }
+
+    // 'check' 태스크가 실행될 때 'ktlint' 태스크가 함께 수행되도록 합니다.
+    afterEvaluate { project ->
+        check.dependsOn ktlint
     }
 }
 
