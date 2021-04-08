@@ -99,4 +99,19 @@ object Util {
             return distance.toString() + context.getString(R.string.distance_m)
         }
     }
+
+    /**
+     * zip 조합.
+     * zip 조합 후 filter기능 이용 Int 값이 1인 array를 고르고
+     * map 으로 해당 array의 요일을 반
+     */
+    fun getSummary(): String {
+        var summary = ""
+        var summarydata = arrayOf("월", "화", "수", "목", "금", "토", "일")
+        var onday = arrayOf(0, 1, 1, 0, 1, 0, 1)
+
+        onday.zip(summarydata).filter {pair -> pair.first == 1 }.map {
+            pair -> summary = summary.plus(if (summary.isEmpty()) "${pair.second}" else ", ${pair.second}")}
+        return summary
+    }
 }
