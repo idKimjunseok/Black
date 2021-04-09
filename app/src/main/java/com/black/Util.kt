@@ -10,6 +10,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.black.databinding.CellToastBinding
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 object Util {
 
@@ -113,5 +115,69 @@ object Util {
         onday.zip(summarydata).filter {pair -> pair.first == 1 }.map {
             pair -> summary = summary.plus(if (summary.isEmpty()) "${pair.second}" else ", ${pair.second}")}
         return summary
+    }
+
+    /**
+     * 주소 정보 변경
+     * 읍,면,동
+     * 예 (강남구 역삼동)
+     *
+     */
+    fun setadd(s: String): String {
+        var addr = ""
+        val p1 = Pattern.compile("([가-힣]+(군|구))")
+        val p2 = Pattern.compile("([가-힣]+(\\d{1,5}|\\d{1,5}(,|.)\\d{1,5}|)+(시|군|구|읍|면|동|가|리))(^구|)")
+        val m1: Matcher = p1.matcher(s)
+        val m2: Matcher = p2.matcher(s)
+
+        var count = 0
+        var addrs = ArrayList<String>()
+
+        while (m2.find()) {
+            addrs.add(m2.group(1) + " ")
+            count++
+        }
+        if (count > 2) {
+            for (i in (count - 2) until addrs.size) {
+                addr += addrs[i]
+            }
+        } else {
+            for (i  in addrs) {
+                addr += i
+            }
+        }
+        return addr
+    }
+
+    /**
+     * 주소 변경
+     * 동까지 표시.
+     * 예: (역삼동)
+     *
+     */
+    fun setSearchaddr(s: String): String {
+        //|가|리
+        var addr = ""
+        val p2 = Pattern.compile("([가-힣]+(\\d{1,5}|\\d{1,5}(,|.)\\d{1,5}|)+(읍|면|동|가))(^구|)")
+        val m2: Matcher = p2.matcher(s)
+
+        var count = 0
+        var addrs = ArrayList<String>()
+
+        while (m2.find()) {
+            addrs.add(m2.group(1) + " ")
+            count++
+        }
+
+        if (count > 2) {
+            for (i in (count - 2) until addrs.size) {
+                addr += addrs[i]
+            }
+        } else {
+            for (i  in addrs) {
+                addr += i
+            }
+        }
+        return addr
     }
 }
