@@ -1,4 +1,4 @@
-package com.black
+package com.black.util
 
 import android.content.Context
 import android.graphics.Paint
@@ -10,6 +10,7 @@ import android.text.style.StyleSpan
 import android.text.style.TypefaceSpan
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
+import com.black.R
 
 object TextUtil {
 

@@ -1,4 +1,4 @@
-package com.black
+package com.black.baseview.viewmodel
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable

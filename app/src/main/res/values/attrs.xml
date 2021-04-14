@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Typekit">
+        <attr name="myfont" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CirclePageIndicator">
+        <attr name="centered" format="boolean" />
+        <attr name="fillColor" format="color" />
+        <attr name="pageColor" format="color" />
+        <attr name="android:orientation"/>
+        <attr name="radius" format="dimension" />
+        <attr name="selectRadius" format="dimension"/>
+        <attr name="radiusPadding" format="dimension" />
+        <attr name="snap" format="boolean" />
+        <attr name="strokeColor" format="color" />
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="android:background"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoResizeTextView">
+        <attr name="minFontSize" format="dimension" />
+        <attr name="shrinkTextSize" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <declare-styleable name="SnappingSeekBar">
+        <attr name="progressDrawable" format="reference"/>
+        <attr name="thumb" format="reference"/>
+        <attr name="itemsAmount" format="integer"/>
+        <attr name="itemsArrayId" format="reference"/>
+        <attr name="indicatorDrawable" format="reference"/>
+        <attr name="indicatorSize" format="dimension"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="indicatorColor" format="color"/>
+        <attr name="thumbnailColor" format="color"/>
+        <attr name="textIndicatorColor" format="color"/>
+        <attr name="textStyle" format="reference"/>
+        <attr name="textIndicatorTopMargin" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialEditText">
+        <attr name="met_iconClearButton" format="reference" />
+        <attr name="met_iconClearButtonSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="android:gravity" />
+        <attr name="android:layout_gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="SendBar">
+        <attr name="hasAnim" format="boolean" />
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="ErrorBar">
+        <attr name="android:text" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="EditLayout">-->
+<!--        <attr name="label" format="reference" />-->
+<!--        <attr name="labelColor" format="reference" />-->
+<!--        <attr name="android:imeOptions"  />-->
+<!--        <attr name="android:inputType"  />-->
+<!--        <attr name="android:hint"  />-->
+<!--        <attr name="android:maxLength"  />-->
+<!--        <attr name="android:maxLines" />-->
+<!--        <attr name="option" format="reference" />-->
+<!--        <attr name="bottom_option" format="reference" />-->
+<!--        <attr name="label_always" format="boolean" />-->
+<!--        <attr name="message_visiable" format="boolean" />-->
+<!--        <attr name="massage" format="reference"  />-->
+<!--        <attr name="focus" format="boolean"  />-->
+<!--        <attr name="mode" format="enum">-->
+<!--            <enum name="normal" value="0"/>-->
+<!--            <enum name="option" value="1"/>-->
+<!--            <enum name="time" value="2"/>-->
+<!--            <enum name="password" value="3"/>-->
+<!--            <enum name="resend" value="4"/>-->
+<!--            <enum name="nickname" value="5"/>-->
+<!--            <enum name="code" value="6"/>-->
+<!--            <enum name="review" value="7"/>-->
+<!--        </attr>-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="StandardTextLayout">
+        <attr name="label" format="reference" />
+        <attr name="labelColor" format="reference" />
+        <attr name="hint" format="reference" />
+        <attr name="android:imeOptions"  />
+        <attr name="android:inputType"  />
+        <attr name="android:maxLength"  />
+        <attr name="android:maxLines" />
+        <attr name="option" format="reference" />
+        <attr name="bottom_option" format="reference" />
+        <attr name="label_always" format="boolean" />
+        <attr name="message_visiable" format="boolean" />
+        <attr name="massage" format="reference"  />
+        <attr name="focus" format="boolean"  />
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <!-- the minimum of the range -->
+        <attr name="absoluteMinValue" format="integer|float"/>
+
+        <!-- the maximum of the range -->
+        <attr name="absoluteMaxValue" format="integer|float"/>
+
+        <!-- show a single slider -->
+        <attr name="singleThumb" format="boolean"/>
+
+        <!-- show the labels on the right and left-->
+        <attr name="showLabels" format="boolean"/>
+
+        <!-- alwaysActive will make the buttons and bar always draw as the activeColor (the default is false) -->
+        <attr name="alwaysActive" format="boolean"/>
+
+        <!-- show the currently selected value above each thumb (defaults to true) -->
+        <attr name="valuesAboveThumbs" format="boolean"/>
+
+        <!-- padding on either side on the slider -->
+        <attr name="internalPadding" format="dimension"/>
+
+        <!-- the height of the bar -->
+        <attr name="barHeight" format="dimension"/>
+
+        <!-- the height of the active bar -->
+        <attr name="activeBarHeight" format="dimension"/>
+
+        <!-- the color of the bar that is not selected -->
+        <attr name="defaultColor" format="color"/>
+
+        <!-- the color of the bar that is selected -->
+        <attr name="activeColor" format="color"/>
+
+        <!-- the color of the text above thumbs -->
+        <attr name="textAboveThumbsColor" format="color"/>
+
+        <!-- set drawables for thumb handles -->
+        <attr name="thumbNormal" format="reference"/>
+        <attr name="thumbPressed" format="reference"/>
+        <attr name="thumbDisabled" format="reference"/>
+
+        <!-- thumb shadow specifications -->
+        <attr name="thumbShadow" format="boolean"/>
+        <attr name="thumbShadowColor" format="color"/>
+        <attr name="thumbShadowXOffset" format="dimension"/>
+        <attr name="thumbShadowYOffset" format="dimension"/>
+        <attr name="thumbShadowBlur" format="dimension"/>
+
+        <!-- to activate the thumbs and texts when the min and max values are the default ones (defaults to false) -->
+        <attr name="activateOnDefaultValues" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="BarcodeScannerView">
+        <attr name="shouldScaleToFill" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEllipsizeTextView">
+        <attr name="maxLines" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SlideSwitch">
+        <attr name="switchthumb"  format="reference"/>
+        <attr name="track" format="reference" />
+        <attr name="textOn" format="reference|string" />
+        <attr name="textOff" format="reference|string" />
+        <attr name="drawableOn" format="reference" />
+        <attr name="drawableOff" format="reference" />
+        <attr name="pushStyle" format="boolean" />
+        <attr name="textOnThumb" format="boolean" />
+        <attr name="thumbExtraMovement" format="dimension" />
+        <attr name="thumbTextPadding" format="dimension" />
+        <attr name="trackTextPadding" format="dimension" />
+        <attr name="switchTextAppearanceAttrib" format="reference" />
+        <attr name="switchMinWidth" format="dimension" />
+        <attr name="switchMinHeight" format="dimension" />
+        <attr name="switchPadding" format="dimension" />
+        <attr name="leftBackground" format="reference"/>
+        <attr name="rightBackground" format="reference"/>
+        <attr name="backgroundMask" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SlideSwitchAttr" format="reference" />
+    <declare-styleable name="SlidingTabLayout">
+        <attr name="defaultTabPadding" format="dimension"/>
+        <attr name="layoutPaddingLeft" format="dimension"/>
+        <attr name="layoutPaddingRight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="HomeBannerViewPagerIndicator">
+        <attr name="currentPageColor" format="color"/>
+        <attr name="simpleindicatorColor" format="color"/>
+        <attr name="animation" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="slide" value="1"/>
+            <enum name="fade" value="2"/>
+        </attr>
+        <attr name="android:gravity" />
+        <attr name="android:layout_gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="Theme">
+        <attr name="IndicatorStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShimmerLayout">
+        <attr name="shimmer_color" format="color|reference"/>
+        <attr name="shimmer_animation_duration" format="integer|reference"/>
+        <attr name="shimmer_auto_start" format="boolean|reference"/>
+        <attr name="shimmer_angle" format="integer|reference"/>
+        <attr name="shimmer_mask_width" format="float|reference"/>
+        <attr name="shimmer_gradient_center_color_width" format="float|reference"/>
+        <attr name="shimmer_reverse_animation" format="boolean|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExtrmLinePageIndicator">
+        <!-- Whether or not the selected indicator fades. -->
+        <attr name="fades" format="boolean" />
+        <!-- Length of the delay to fade the indicator. -->
+        <attr name="fadeDelay" format="integer" />
+        <!-- Length of the indicator fade to transparent. -->
+        <attr name="fadeLength" format="integer" />
+        <!-- Color of the selected line that represents the current page. -->
+        <!--<attr name="selectedColor" />-->
+        <!-- View background -->
+        <attr name="android:background"/>
+        <!-- Move Animation Enabled. -->
+        <attr name="moveAnim" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectableRoundImageView">
+        <attr name="left_bottom_radius" format="dimension"/>
+        <attr name="left_top_radius" format="dimension"/>
+        <attr name="right_bottom_radius" format="dimension"/>
+        <attr name="right_top_radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageLoadView" parent="SelectableRoundImageView">
+        <attr name="left_bottom_radius" />
+        <attr name="left_top_radius" />
+        <attr name="right_bottom_radius" />
+        <attr name="right_top_radius" />
+
+        <attr name="errorText" format="string" />
+        <attr name="errorTextColor" format="color|reference" />
+        <attr name="errorTextStyle" format="reference" />
+
+        <attr name="circleType" format="boolean" />
+
+        <attr name="android:scaleType" />
+    </declare-styleable>
+
+    <declare-styleable name="TextInputLayout">
+        <!-- The text to display as placeholder text in the text input area. -->
+        <attr name="placeholderText" format="string"/>
+    </declare-styleable>
+
+</resources>
+

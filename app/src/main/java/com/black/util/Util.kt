@@ -1,14 +1,18 @@
-package com.black
+package com.black.util
 
+import android.app.ActivityManager
 import android.content.Context
 import android.content.res.Resources
+import android.os.Build
 import android.text.TextUtils
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.webkit.WebView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import com.black.R
 import com.black.databinding.CellToastBinding
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -86,6 +90,25 @@ object Util {
         if (obj is Map<*, *>) return obj.isEmpty()
         if (obj is List<*>) return obj.isEmpty()
         return if (obj is Array<*>) obj.size == 0 else false
+    }
+
+    fun Context.webViewSetPath() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            val processName = getProcessName(this)
+            if(processName != packageName) {
+                WebView.setDataDirectorySuffix(processName)
+            }
+        }
+    }
+
+    fun getProcessName(context: Context): String? {
+        val manager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        for(info in manager.runningAppProcesses) {
+            if(info.pid == android.os.Process.myPid()) {
+                return info.processName
+            }
+        }
+        return ""
     }
 
     /**

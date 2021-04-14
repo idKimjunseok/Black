@@ -1,7 +1,6 @@
 package com.black.util
 
 import android.util.Log
-import com.black.Util
 import java.io.PrintWriter
 import java.io.StringWriter
 
