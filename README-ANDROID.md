@@ -1,7 +1,7 @@
-# 그립컴퍼니 ANDROID 개발 사전 과제
+# 그립컴퍼니 Android 개발 사전 과제
 
 ## 개요
-제공된 API를 호출하여 영화를 검색하고 즐겨찾기로 등록 할 수 있는 iOS 앱을 구현합니다.
+제공된 API를 호출하여 영화를 검색하고 즐겨찾기로 등록 할 수 있는 Android 앱을 구현합니다.
 
 ## 개발 요건
 - 디자인은 과제의 평가와 무관하며 자유롭게 작업해주시면 됩니다.
@@ -80,7 +80,7 @@ http://www.omdbapi.com/?apikey=92e32667&s=iron%20man&page=2
   
 ## 제출 방법
 - GitHub에 Private Repository를 만들고 Repository 명을 아래와 같이 설정합니다.
-  - Grip_iOS_지원자이름
+  - Grip_Android_지원자이름
 - 부득이한 경우가 아니라면 실제 프로젝트를 진행하듯이 과제의 시작부터 완료까지 기능 단위별로 중간 과정에서도 계속 커밋을 합니다.
 - 아래의 GitHub 사용자를 Collaborator로 추가합니다.
   - @danny.bae @MG-Han @idKimjunseok
